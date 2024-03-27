@@ -8,24 +8,20 @@
 
   </head>
   <body>
-  <div class = "container text-center">
-    <h1>{{company_name}} Careers</h1>
+  <div class = "container">
+    <h1 class = "text-center mt-2 mb-4"">{{company_name}} Careers</h1>
     <img class="card-img-top" src="https://9ab2a8d3-45ad-4c7b-bab2-db1da437221c-00-2oa5ezan5rtrd.sisko.replit.dev/static/banner.jpg" width="420" height="320" alt="HTML Dog">
 
-    <h2 class = "mt-4 mb-4">About Piku</h2>
+    <h2 class = "text-center mt-4 mb-4">About Piku</h2>
 
-    <p>
+    <p class = "text-center">
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
     </p>
 
-    <h2 class = "mt-4">Open Positions</h2>
-    <div>
+    <h2 class = "mt-4 text-center">Open Positions</h2>
+    <div class = "container">
       {% for job in jobs %}
-        <div>
-          <h4>{{ job['title'] }}</h4>
-          <div></div>
-          <p>{{ job['location'] }}</p>
-        </div>
+        {% include 'jobitem.html' %}
       {% endfor %}
     </div>
     <div class = "text-center">
