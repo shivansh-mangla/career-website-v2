@@ -12,3 +12,10 @@ def load_jobs_from_db():
   for row in data:
     JOBS.append(row)
   return JOBS
+
+
+def load_job_from_db(id):
+  data = supabase.table('jobs').select('*').eq('id', id).execute().data
+  if len(data) == 0:
+    return None
+  return data[0]
