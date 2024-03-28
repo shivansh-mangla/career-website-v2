@@ -1,5 +1,7 @@
 <h4>Application Form</h4>
+
 <form action = "/job/{{job['id']}}/apply" method = "post">
+
   <div class="mb-2">
   <label>Full Name</label><br>
   <input type="text" required name="full_name" placeholder="Bruce Wayne">
@@ -30,5 +32,12 @@
   <input type="url" name="resume_url">
   </div>
 
+  <!-- hCaptcha Spam Protection -->
+  <div class="h-captcha" data-captcha="true"></div>
+
   <input type="submit">
+
 </form>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
+
