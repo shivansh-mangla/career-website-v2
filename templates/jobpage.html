@@ -36,7 +36,8 @@
         <li>{{line}}</li>
         {% endfor %}
       </ol>
-      <p>{{job.requirements}}</p>
+
+      {% include 'application_form.html' %}
   
       {% include 'footer.html' %}
     </div>
